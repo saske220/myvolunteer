@@ -1,0 +1,48 @@
+.main .menu .moreBtnWrap {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 10rem;
+}
+.main .menu .moreBtnWrap .moreBtn {
+  padding: 6px 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.main .menu .moreBtnWrap .moreBtn::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-image: url("../img/toggle.svg");
+  background-position: center center;
+  transform: rotate(0deg);
+}
+.main .menu .moreBtnWrap .moreBtn.rotated::after {
+  transform: rotate(180deg);
+}
+.main .menu .moreBtnWrap .moreMenu {
+  width: 56vw;
+  height: 50vh;
+  display: none;
+  position: absolute;
+  left: 50%;
+  background-color: white;
+  border-radius: 1rem;
+}
+.main .menu .moreBtnWrap .moreMenu h2 {
+  padding: 1rem 0 1.4rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.main .menu .moreBtnWrap .moreMenu p {
+  margin: 0.6rem;
+  padding: 0.4rem 1rem;
+  background-color: #d9d9d9;
+  display: inline-flex;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}

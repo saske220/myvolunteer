@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.moreBtnWrap {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 10rem;
+  .moreBtn {
+    padding: 6px 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .moreBtn::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-image: url("../img/toggle.svg");
+    background-position: center center;
+    transform: rotate(0deg);
+    // background-size: cover;
+    // border: 1px solid tomato;
+  }
+  .moreBtn.rotated::after {
+    transform: rotate(180deg);
+  }
+  .moreMenu {
+    width: 56vw;
+    height: 50vh;
+    display: none;
+    // border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    border-radius: 1rem;
+    // border: 1px solid black;
+    h2 {
+      padding: 1rem 0 1.4rem 0;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    p {
+      // font-family: $;
+      margin: 0.6rem;
+      padding: 0.4rem 1rem;
+      background-color: $keyword;
+      display: inline-flex;
+      border-radius: 6px;
+      font-size: 1.2rem;
+    }
+  }
+}

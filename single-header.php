@@ -16,55 +16,25 @@
       echo get_bloginfo('name'); } else { echo wp_title(''); } ?></title>
 
 <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
-<link href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css" rel="stylesheet" type="text/css">
-
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri()); ?>/css/style.css">
-<link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri()); ?>/top/top.css">
+
+
+
 
 </head>
+
  <?php wp_head(); ?>
  <header class="header">
     <section class="about">
-
+<p class="about__name"><?php global $user_identity; echo $user_identity; ?></p>
 
 <div class="about__icon"><?php bp_loggedin_user_avatar("type=thumb&width=35&height=35" ); ?></div>
 
-
+<p class="about__option"><a href="<?php global $user_identity; echo $user_identity; ?>">アカウント設定⇨</a></p>
 
 </section>
+
+
+			<h2><?php single_cat_title(); ?></h2>
 
  </header>
-
-  <div class="menu">
-<section class="categorys">
-
-<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
-	<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-	<input type="submit" id="searchsubmit" value="検索" />
-	<?php do_action( 'bp_blog_search_form' ) ?>
-</form>
-
-<!-- <h2 class="categorys__titles">カテゴリー一覧</h2> -->
-<p class="moreBtn">カテゴリー一覧</p>
-          <div class="moreMenu">
-            <h2>カテゴリー一覧</h2>
-            <p>#ごみ拾い</p>
-            <p>#介護</p>
-            <p>#子ども食堂</p>
-            <p>#地球温暖化</p>
-            <!-- <p>#雪かき</p>
-            <p>#マラソン</p>
-            <p>#炊き出し</p>
-            <p>#楽しい</p> -->
-          </div>
-<ul>
-<?php
-  $args = array(
-    'title_li' => '',
-    'depth'=> 1,
-    'show_count' => 1,
-);
-wp_list_categories($args); ?>
-</ul>
-</section>
-    </div>

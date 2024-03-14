@@ -1,0 +1,143 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0 auto;
+}
+
+main {
+  width: 100vw;
+  height: 92vh;
+  overflow: auto;
+}
+main .headerImg {
+  width: 100vw;
+  height: 16vh;
+  background-color: grey;
+  text-align: end;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+main .headerImg img {
+  padding: 1.4rem;
+}
+main .headerImg .userTop {
+  width: 100vw;
+  height: 20vh;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .headerImg .userTop .userIcon {
+  width: 12rem;
+  height: 12rem;
+  background-color: tomato;
+  border-radius: 50%;
+}
+main .headerImg .userTop .editBtn {
+  padding: 0.8rem 4rem;
+  background-color: #61b23a;
+  border-radius: 7.8rem;
+  font-size: 1.6rem;
+  text-align: end;
+  color: white;
+}
+main h2 {
+  font-size: 1.6rem;
+  margin: 7rem 0 0 2rem;
+}
+main .prText {
+  font-size: 1.2rem;
+  margin: 3rem 2rem 4.4rem 2rem;
+}
+main .prizeWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+main .prizeWrap .prize {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd582;
+  border-radius: 50%;
+}
+main .prizeWrap .prize p {
+  padding-top: 0.4rem;
+  font-size: 1.2rem;
+  color: #6e6e6e;
+}
+main .prizeWrap .lockWrap {
+  height: 0vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+main .prizeWrap .lockWrap .lock {
+  background-image: url("../img/lock.png");
+}
+main .prizeWrap .moreBtn {
+  width: 100%;
+  padding-right: 1.4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+main .prizeWrap .moreBtn .more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.2rem;
+}
+main .prizeWrap .moreBtn .more::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  background-image: url("../img/toggle.svg");
+  background-position: center center;
+  transform: rotate(180deg);
+}
+main .prizeWrap .moreBtn .more.rotated::before {
+  transform: rotate(0deg);
+}
+main section {
+  width: 100vw;
+  height: 12rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2.4rem 0;
+}
+main section .postImg {
+  width: 12rem;
+  height: 12rem;
+  background-color: tomato;
+}
+main section .postText {
+  width: 60vw;
+  height: 12rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main section .postText h3 {
+  font-size: 1.6rem;
+}
+main section .postText p {
+  font-size: 1.2rem;
+  margin: 0.6rem 0;
+} /*# sourceMappingURL=profile.css.map */
